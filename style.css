@@ -158,6 +158,22 @@ body.lock {
 	margin-left: 15px;	
 }
 
+.close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background-image: url(img/close.svg);
+	background-size: 100%;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.close:hover {	
+	background-image: url(img/closeActive.svg);	
+}
+
+
 
 
 /*header*/
@@ -2162,13 +2178,6 @@ body.lock {
 	position: relative;
 }
 
-.feedback__close {
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	cursor: pointer;
-}
-
 .feetback__container {
 	max-width: 600px;	
 	margin: 0 auto;
@@ -2268,13 +2277,6 @@ body.lock {
 	border: 2px solid #fff;
 	background-color: #7a7679; 
 	color: #fff;
-}
-
-.check__close {
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	cursor: pointer;
 }
 
 .check__container {
@@ -2382,13 +2384,6 @@ body.lock {
 	position: relative;
 }
 
-.entrance__close {
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	cursor: pointer;
-}
-
 .entrance__container {
 	max-width: 600px;	
 	margin: 0 auto;
@@ -2439,27 +2434,19 @@ body.lock {
 	position: relative;
 }
 
-.list__close {
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	cursor: pointer;
-}
 
 .list__container {
 	max-width: 600px;	
 	margin: 0 auto;
 	padding: 0 15px;
-	padding-top: 50px;
-	text-align: center;	
+	padding-top: 50px;	
 	padding-bottom: 50px;
 }
 
 .list__input-wrapper {
-	width: 100%;
-	border: 1px solid #000;	
-	border-radius: 40px;	
-	border-top: none;
+	width: 100%;	
+	/*border-top: none;*/
+	overflow: hidden;	
 }
 
 .list__title {
@@ -2468,15 +2455,20 @@ body.lock {
 	margin-bottom: 30px;;
 }
 
-.list__input {
+.list__input {	
 	height: 68px;
-	width: 100%;
-	margin-bottom: 30px;
-	border-radius: 50px;
+	width: 100%;	
+	border-radius: 15px 15px 15px 15px;
 	padding: 0 15px 0 15px;
 	border: 1px solid #000;	
-	top: 0;
-	left: 0;
+	color: #000;
+	font-family: "HelveticaNeueRegular";
+	font-size: 17px;	
+	letter-spacing: normal;		
+}
+
+.list__input.input-select {
+	border-radius: 15px 15px 0 0;
 }
 
 .list__form {
@@ -2490,12 +2482,55 @@ body.lock {
 	color: #7a7679;
 }
 
-.select__list-item {
-	padding-bottom: 10px;
+.list__input-wrapper {	
+	position: relative;}
+
+.select__list {
+	transform: translateY(-300px);	
+	background-color: #fff;
+	border: 1px solid #000;	
+	border-radius: 0 0 15px 15px;
+	overflow: hidden;
+	height: 175px;
+	overflow: auto;
+	transition: all 0.5s
+
+}
+
+.select__list-item {	
+	padding: 20px 10px;	
+}
+
+.select__list-item:hover {
+	background-color: #F3E1D9;
 }
 
 .select__list-item::last-child {
-	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.select__list-item a{
+	color: #000;
+	font-family: "HelveticaNeueRegular";
+	font-size: 17px;	
+	letter-spacing: normal;		
+}
+
+.select__arrow {
+	position: absolute;
+	top: 34px;
+	right: 15px;	
+	cursor: pointer;
+	transform: rotate(0) translateY(-50%);;
+}
+
+.select__arrow.active {
+	transform: rotate(180deg);
+	transform: rotate(-180deg) translateY(50%);
+}
+
+.select__list.active {
+	transform: translateY(0);
 }
 
 /*верстка заглушки*/

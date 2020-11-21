@@ -10,10 +10,6 @@ $(document).ready(function() {
 		document.querySelector('.item-brend__video').addEventListener('click', function (e) { this.removeEventListener('click', videoA, false); videoA.apply(this, arguments); } , false);	
 	}
 
-	
-	
-
-
 	const cart = this.querySelector('.main__item-cart');
 	const rotate = (event) =>  {
 		
@@ -31,5 +27,28 @@ $(document).ready(function() {
 		$('.popap').addClass('popap-hide');
 	});
 	
+	let selectInput = $(' .list__input');
+	let selectList = $('.select__list');
+	$('.select__arrow').click(function(){		
+		$('.select__arrow').toggleClass('active');
+		selectList.toggleClass('active');
+		selectInput.toggleClass('input-select');
+	});
 
+	let input = $('.list__input');
+	
+	let items = $('.select__list-item');
+	const selectItem = () => {	
+		let input = $('.list__input');
+		for(var i=0; i<items.length; i++) {
+			var el = items[i];			
+		}			
+	}
+
+	items.click(function (e){		
+		selectList.removeClass('active');
+		selectInput.removeClass('input-select');
+		input.val(e.target.innerText);		
+	});
+	
 });
