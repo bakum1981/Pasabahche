@@ -5,7 +5,6 @@ $(document).ready(function() {
 		$('body').toggleClass('lock');
 	});
 
-
 	if(document.querySelector('.item-brend__video')){
 		var videoA = function () {this.innerHTML = '<iframe  src="https://www.youtube.com/watch?v=zRCUDjXCfiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}; 
 		document.querySelector('.item-brend__video').addEventListener('click', function (e) { this.removeEventListener('click', videoA, false); videoA.apply(this, arguments); } , false);	
@@ -25,7 +24,7 @@ $(document).ready(function() {
 	}
 
 	$('.close').click(function(){
-		$('.popup').addClass('popup-hide');
+		$('.popap').addClass('popap-hide');
 	});
 	
 	let selectInput = $(' .list__input');
@@ -51,7 +50,5 @@ $(document).ready(function() {
 		selectInput.removeClass('input-select');
 		input.val(e.target.innerText);		
 	});
-
-	const popupLInk = document.querySelectorSelectorAll('')
 	
 });
