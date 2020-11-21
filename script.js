@@ -5,8 +5,13 @@ $(document).ready(function() {
 		$('body').toggleClass('lock');
 	});
 
-	var videoA = function () {this.innerHTML = '<iframe  src="https://www.youtube.com/watch?v=zRCUDjXCfiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}; 
-	document.querySelector('.item-brend__video').addEventListener('click', function (e) { this.removeEventListener('click', videoA, false); videoA.apply(this, arguments); } , false);	
+	if(document.querySelector('.item-brend__video')){
+		var videoA = function () {this.innerHTML = '<iframe  src="https://www.youtube.com/watch?v=zRCUDjXCfiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}; 
+		document.querySelector('.item-brend__video').addEventListener('click', function (e) { this.removeEventListener('click', videoA, false); videoA.apply(this, arguments); } , false);	
+	}
+
+	
+	
 
 
 	const cart = this.querySelector('.main__item-cart');
