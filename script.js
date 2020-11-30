@@ -61,6 +61,27 @@ function prewiewImage() {
 
 		fileReader.readAsDataURL(file[0]);
 	}
+
+	const form = document.querySelector('.form');
+	form.addEventListener("submit", formSend);
+
+	async function formSend(e) {
+			e.preventDefault();
+			let formData = new formData(form);
+			formData.append(document.getElementById('file').files[0]);
+			let response = await fetch('sendmail.php', {
+				method: 'POST',
+				body: formData
+			});
+			if (response.ok){
+				let result = await response.json();
+				alert(result.message);
+				document.querySelector('.check__gallery').innerHTML = '';
+				form.reset();
+			}else{
+
+			}
+	}
 }
 
 var count = 0; 
