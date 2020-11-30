@@ -8,21 +8,40 @@
 	<link rel="stylesheet" href="style.css">	
 </head>
 <body>	
-	<div class="feedback feetback__wrap popap">
+	<div class="feedback feetback__wrap popup">		
 		<div class="feedback__close close"></div>
 		<div class="feetback__container">					
-		<form action="#" class="feedback__form">			
-			<div class="feedback__title title">обратная связь</div>			
-			<input placeholder='Вопрос*' required name="question" type="text" class="feetback__input question" required>
-			<input placeholder='ФИО*' required name="name" type="text" class="feetback__input name">
-			<input placeholder='E-mail*' required name="email" type="text" class="feetback__input email">
-			<input placeholder='Телефон*' required name="phone" type="text" class="feetback__input phone">
-			<textarea  name="message*" required placeholder='Сообщение*' class='message'  id="message" ></textarea>
-			<div class="feetback__checkbox"><input type="checkbox" class="confirm"> <span>Подтверждаю согласие с <a href="#">политикой в отношении обработки персональных данных</a></span></div>			
+		<form action="#" class="feedback__form">								
+			<div class="list list__wrap popup">
+			<div class="list__close close"></div>
+			<div class="list__container">						
+				<div class="list__title title">Обратная связь</div>
+				<div class="list__input-wrapper">
+					<div class="select__arrow"><img src="img/arrow-bottom.svg" alt="Стрелка"></div>					
+					<input placeholder='Вопрос*' required name="question" type="text" class="list__input question" required>					
+					<ul class='select__list'>
+						<li class="select__list-item"><a href="#">Регистрация чеков</li></a>
+						<li class="select__list-item"><a href="#">Получено призов</li></a>
+						<li class="select__list-item"><a href="#">Правила акции</li></a>
+						<li class="select__list-item"><a href="#">Технические проблемы</li></a>							
+					</ul>
+				</div>	
+				<div class="feetback__inputs">
+					<input placeholder='ФИО*' required name="name" type="text" class="feetback__input name">
+					<input placeholder='E-mail*' required name="email" type="text" class="feetback__input email">			
+					<input placeholder='Телефон*' required name="phone" type="text" class="feetback__input phone">					
+				</div>
+				<textarea  name="message*" required placeholder='Сообщение*' class='message'  id="message" ></textarea>
+				<div class="feetback__checkbox"><input type="checkbox" class="confirm"> <span>Подтверждаю согласие с <a href="#">политикой в отношении обработки персональных данных</a></span></div>			
 			<input class="button-download send-btb"type="button" value="Отправить">
-		</form><!-- feetback__container -->
-		</div><!-- feedback -->
-	</div> <!-- feedback -->
+				
+			</form><!-- list__container -->			
+			</div><!-- list -->
+		</div> <!-- list -->
+
+</form><!-- feetback__container -->
+</div><!-- feedback -->
+</div> <!-- feedback -->
 	
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="script.js"></script>
